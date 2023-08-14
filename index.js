@@ -11,5 +11,5 @@ const data = {
 }
 
 jsonfile.writeFile(FILE_PATH, data, ()=>{
-    git().add('.').commit("random commit", {'--date': DATE}).push();
+    git().add('.');
 });
