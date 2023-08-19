@@ -11,5 +11,5 @@ const data = {
 }
 
 jsonfile.writeFile(FILE_PATH, data, ()=>{
-    git().add('.').commit(DATE, {'--date':DATE}).push();
+    git().add('.').commit(DATE, {'--date':DATE}).push('origin', 'main');
 });
