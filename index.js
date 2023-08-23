@@ -10,7 +10,6 @@ const data = {
     data : DATE
 }
 
-jsonfile.writeFile(FILE_PATH, data);
-let count=0;
-
-simpleGit().add([FILE_PATH, './index.js']).commit(DATE, {'--date': DATE}).push();
+jsonfile.writeFile(FILE_PATH, data, ()=>{
+    simpleGit().add([FILE_PATH, './index.js']).commit(DATE, {'--date': DATE}).push();
+});
